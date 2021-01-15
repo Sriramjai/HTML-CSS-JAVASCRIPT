@@ -14,8 +14,9 @@ body {
 }
 
 .bg {
-  background: url("https://images.unsplash.com/photo-1527668752968-14dc70a27c95?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c3dpc3N8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80")
+  background: url("https://cdn.britannica.com/65/162465-050-9CDA9BC9/Alps-Switzerland.jpg")
     no-repeat center center/cover;
+
   position: absolute;
   top: -30px;
   left: -30px;
