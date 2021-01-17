@@ -5,7 +5,7 @@
 }
 body {
   background: linear-gradient(90deg, #cdb4db 0%, #a2d2ff 100%);
-  color: #fff;
+  color: rgb(59, 58, 58);
   font-family: "Muli", sans-serif;
   margin: 0;
   display: flex;
@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-  background-color: rgba(162, 210, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 20px 40px;
   border-radius: 5px;
 }
