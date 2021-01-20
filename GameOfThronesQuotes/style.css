@@ -5,8 +5,8 @@
 }
 
 body {
-  background: linear-gradient(90deg, #6bd54d, 40%, #30802c);
-  /* background: url('BB.png') no-repeat fixed center; */
+  /* background: linear-gradient(90deg, #6bd54d, 40%, #30802c); */
+   background: url('Tyrion.jpg') center; 
   font-family: "Muli", sans-serif;
   margin: 0;
   display: flex;
@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-  background-color: #fff;
+  background-color: rgba(39, 38, 38,0.8);
   padding: 50px 20px;
   max-width: 100%;
   width: 800px;
@@ -42,7 +42,7 @@ h3 {
 }
 
 .btn {
-  background-color: #5bb656;
+  background-color: #232423;
   color: #fff;
   border: 0;
   border-radius: 10px;
