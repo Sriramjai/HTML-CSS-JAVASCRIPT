@@ -4,8 +4,9 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #95a5a6;
+  background-color: #B7950B ;
   font-family: "Muli", sans-serif;
+  color: #fff;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -15,7 +16,23 @@ body {
   overflow: hidden;
 }
 
-div {
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.username {
+  color: #17202A;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.userjob{
+  color: #17202A;
+  
+}
+
+.container-speed {
   position: absolute;
   bottom: 20px;
   background: rgba(0, 0, 0, 0.1);
@@ -27,11 +44,19 @@ input {
   width: 50px;
   padding: 5px;
   font-size: 18px;
-  background-color: #95a5a6;
+  background-color:#FADBD8;
   border: none;
   text-align: center;
 }
 
 input:focus {
   outline: none;
+}
+
+
+img {
+  width: 100px;
+  border-radius: 50px;
+  float: left;
+  margin-right: 10px;
 }
