@@ -1,12 +1,23 @@
 const container = document.querySelector('.container');
-const unsplashURL = 'https://source.unsplash.com/randaom/';
-const rows = 10;
+const unsplashURL = 'https://source.unsplash.com/random/';
+const rows = document.querySelector('.rowsSelection');
 
-for(let i = 0; i < rows * 3; i++){
-    const img = document.createElement('img');
-    img.src = `${unsplashURL}${getRandomSize()}`
-    container.appendChild(img);
-}
+rows.addEventListener('change', (e) => {
+    console.log("Hey");
+    const numberOfRows = e.target.value
+    for(let i = 0; i < numberOfRows * 3; i++){
+        const img = document.createElement('img');
+        img.src = `${unsplashURL}${getRandomSize()}`
+        container.appendChild(img);
+    }
+} )
+
+
+// for(let i = 0; i < rows * 3; i++){
+//     const img = document.createElement('img');
+//     img.src = `${unsplashURL}${getRandomSize()}`
+//     container.appendChild(img);
+// }
 
 function getRandomSize() {
     return `${getRandomNumber()}x${getRandomNumber()}`
