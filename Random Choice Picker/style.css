@@ -5,7 +5,7 @@
 }
 body {
   font-family: "Muli", sans-serif;
-  background-color: #b2f5ea;
+  background-color: #000;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -18,6 +18,7 @@ body {
 h3 {
   margin: 10px 0 20px;
   text-align: center;
+  color: #fff;
 }
 
 .container {
@@ -33,6 +34,10 @@ textarea {
   padding: 10px;
   margin: 0 0 20px;
   font-size: 16px;
+}
+
+textarea:focus {
+  outline: 0;
 }
 
 .tag {
