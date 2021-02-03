@@ -3,8 +3,8 @@
 }
 
 body {
-  background-color: #8bc6ec;
-  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+  background-color: #B7950B;
+  /* background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%); */
   margin: 0;
   display: flex;
   align-items: center;
@@ -17,8 +17,8 @@ body {
   height: 150px;
   width: 150px;
   margin: 10px;
-  border: 2px solid black;
-  background-color: #fff;
+  border: 0.02px solid black;
+  background-color: #CDCCBD;
 }
 
 .fill {
