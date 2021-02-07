@@ -7,9 +7,48 @@ body {
   font-family: "Muli", sans-serif;
   margin: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+img {
+  height: 500px;
+  width: 500px;
+  object-fit: cover;
+}
+
+.carousel {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  height: 530px;
+  width: 500px;
   overflow: hidden;
+}
+
+.img-container {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: rgb(42, 119, 219);
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  width: 49.5%;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:focus {
+  outline: none;
 }
