@@ -1,6 +1,7 @@
 const imageContainer = document.getElementById('imgs');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
+const text = document.getElementById('season');
 
 const img = document.querySelectorAll('#imgs img');
 
@@ -25,6 +26,11 @@ function changeImage() {
 
 
     imageContainer.style.transform = `translateX(${-idx * 500}px)`;
+
+    if(idx === 0) { text.innerHTML = "SPRING"}
+    else if (idx === 1 ) { text.innerHTML = "SUMMER"}
+    else if (idx === 2 ) { text.innerHTML = "FALL"}
+    else if (idx === 3 ) { text.innerHTML = "WINTER"}
 }
 
 function resetInterval(){
