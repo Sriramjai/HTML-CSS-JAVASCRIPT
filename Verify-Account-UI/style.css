@@ -72,6 +72,11 @@ body {
   outline: none;
 }
 
+i {
+  color: red;
+}
+
+
 @media (max-width: 600px) {
   .text-boxes {
     flex-wrap: wrap;
@@ -83,3 +88,5 @@ body {
     max-width: 70px;
   }
 }
+
+
