@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Muli:wght@200;400&display=swap");
 
 :root {
-  --primary-color: #273249;
-  --secondary-color: #3b4a69;
+  /* --primary-color: #273249; */
+  --primary-color: #000;
+  /* --secondary-color: #3b4a69; */
+  --secondary-color: #d8b209;
 }
 
 * {
@@ -32,7 +34,7 @@ header {
 }
 
 .search::placeholder {
-  color: #7378c5;
+  color: #fff;
 }
 
 .search:focus {
