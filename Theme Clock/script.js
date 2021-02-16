@@ -13,12 +13,18 @@ const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov
 
 toggleEl.addEventListener('click', (e) => {
     const html = document.querySelector('html');
+    const body = document.querySelector('body');
     if(html.classList.contains('dark')) {
         html.classList.remove('dark');
         e.target.innerHTML = 'Dark Mode';
+        html.style.backgroundColor = '#DEE4E7';
+        dateEl.style.color = "#222222";
     } else {
         html.classList.add('dark');
         e.target.innerHTML = 'Light Mode';
+        html.style.backgroundColor = '#222222';
+        dateEl.style.color = "#DEE4E7";
+
     }    
 });
 
@@ -41,7 +47,7 @@ function setTime() {
 
     timeEl.innerHTML = `${hoursForClock}:${minutes < 10 ? `0${minutes}` : minutes} ${ampm}`;
 
-    dateEl.innerHTML = `${days[day]}, ${months[month]},<span class="circle">${date}</span>`
+    dateEl.innerHTML = `${days[day]}, ${months[month]} <span class="circle">${date}</span>`
 
 }
 
