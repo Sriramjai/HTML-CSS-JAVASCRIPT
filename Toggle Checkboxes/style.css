@@ -27,19 +27,21 @@ body {
 }
 
 .label {
-  background-color: #d0d0d0;
+  /* background-color: #d0d0d0; */
   width: 80px;
   height: 40px;
+  border: 1px solid lightskyblue;
   border-radius: 50px;
   cursor: pointer;
   display: inline-block;
   margin: 0 15px 0;
   position: relative;
-  
 }
 
-.label:hover{
-  border-color: rgb(165, 26, 26);
+span {
+  user-select: none;
+  /* letter-spacing: 1px; */
+  color: rgb(131, 131, 131);
 }
 
 .toggle:checked + .label {
@@ -48,18 +50,20 @@ body {
 
 i {
   /* background: #fff; */
-  font-size: 30px;
+  font-size: 27px;
   border-radius: 50%;
   position: absolute;
   top: 4px;
-  left:4px;
+  left: 4px;
   align-items: center;
   justify-content: center;
   animation: slideOff 0.3s linear forwards;
+  user-select: none;
 }
 
 .toggle:checked + .label i {
   animation: slideOn 0.3s linear forwards;
+  color: #fff;
 }
 
 @keyframes slideOn {
