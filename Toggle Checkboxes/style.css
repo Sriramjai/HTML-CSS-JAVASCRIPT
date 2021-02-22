@@ -14,3 +14,39 @@ body {
   overflow: hidden;
 }
 
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  width: 200px;
+}
+
+.toggle {
+  visibility: hidden;
+}
+
+.label {
+  background-color: #d0d0d0;
+  width: 80px;
+  height: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 15px 0;
+  position: relative;
+}
+
+.toggle:checked + .label {
+  background-color: #2631cc;
+}
+
+i {
+  /* background: #fff; */
+  font-size: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left:4px;
+  align-items: center;
+  justify-content: center;
+}
