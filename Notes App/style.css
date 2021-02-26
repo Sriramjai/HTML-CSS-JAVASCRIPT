@@ -66,7 +66,6 @@ body {
   padding: 20px;
 }
 
-
 .main {
   padding: 20px;
 }
@@ -74,3 +73,10 @@ body {
 .hidden {
   display: none;
 }
+
+.palette {
+  float: left;
+  height: 20px;
+  width: 30px;
+}
+

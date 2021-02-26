@@ -1,5 +1,9 @@
 const addBtn = document.getElementById('add');
 
+var colors = ["#F28B82", "#FBBC04", "#CBF0F8","#FFF475","#CCFF90","#E6C9A8","AECBFA"];
+
+var palette = "";
+
 const notes = JSON.parse(localStorage.getItem('notes'));
 
 if(notes) {
@@ -14,6 +18,7 @@ function addNewNote(text = '') {
 
     note.innerHTML=`
     <div class="tools">
+        <button class="colorPalette"><i class="fas fa-palette"></i></button>
         <button class="edit"><i class="fas fa-edit"></i></button>
         <button class="delete"><i class="fas fa-trash-alt"></i></button>
     </div>
@@ -27,9 +32,29 @@ function addNewNote(text = '') {
     const main = note.querySelector('.main');
     const textArea = note.querySelector('textarea');
 
+    const colorPaletteBtn = note.querySelector('.colorPalette');
+
     textArea.value = text;
     main.innerHTML = marked(text);
 
+    colorPaletteBtn.addEventListener('click', () => {
+        const color = document.createElement('div');
+        color.classList.add('palette');
+
+        color.innerHTML = `
+        <div id='palette-div' style='border:2px solid white;  justify-content:space-evenly'>&nbsp;</div>
+        `;
+
+        note.appendChild(color);
+
+        for(var i = 0; i < colors.length; i++) {
+            palette = palette + " <div class='palette'" + " style='background-color:" + colors[i]
+                + "' onClick='setBgColor(this)'>  </div>";
+        }
+
+        document.getElementById('palette-div').innerHTML = palette;
+
+    })
 
 
     deleteBtn.addEventListener('click', () => {
@@ -67,4 +92,10 @@ function updateLS() {
 
     localStorage.setItem('notes', JSON.stringify(notes));
 
+}
+
+
+function setBgColor( clickedDiv ) {
+    var currentColor = clickedDiv.style.backgroundColor;
+    body.style.backgroundColor = currentColor;
 }
