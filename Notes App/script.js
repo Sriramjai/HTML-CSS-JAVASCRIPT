@@ -1,6 +1,6 @@
 const addBtn = document.getElementById('add');
 
-var colors = ["#F28B82", "#FBBC04", "#CBF0F8","#FFF475","#CCFF90","#E6C9A8","AECBFA"];
+
 
 var palette = "";
 
@@ -27,6 +27,10 @@ function addNewNote(text = '') {
     <textarea class="${text ? "hidden" : ""}"></textarea>
     `;
 
+    // note.style.backgroundColor = setRandomBgColor();
+
+    
+
     const editBtn = note.querySelector('.edit');
     const deleteBtn = note.querySelector('.delete');
     const main = note.querySelector('.main');
@@ -37,24 +41,24 @@ function addNewNote(text = '') {
     textArea.value = text;
     main.innerHTML = marked(text);
 
-    colorPaletteBtn.addEventListener('click', () => {
-        const color = document.createElement('div');
-        color.classList.add('palette');
+    // colorPaletteBtn.addEventListener('click', () => {
+    //     const color = document.createElement('div');
+    //     color.classList.add('palette');
 
-        color.innerHTML = `
-        <div id='palette-div' style='border:2px solid white;  justify-content:space-evenly'>&nbsp;</div>
-        `;
+    //     color.innerHTML = `
+    //     <div id='palette-div' style='border:2px solid white;  justify-content:space-evenly'>&nbsp;</div>
+    //     `;
 
-        note.appendChild(color);
+    //     note.appendChild(color);
 
-        for(var i = 0; i < colors.length; i++) {
-            palette = palette + " <div class='palette'" + " style='background-color:" + colors[i]
-                + "' onClick='setBgColor(this)'>  </div>";
-        }
+    //     for(var i = 0; i < colors.length; i++) {
+    //         palette = palette + " <div class='palette'" + " style='background-color:" + colors[i]
+    //             + "' onClick='setBgColor(this)'>  </div>";
+    //     }
 
-        document.getElementById('palette-div').innerHTML = palette;
+    //     document.getElementById('palette-div').innerHTML = palette;
 
-    })
+    // })
 
 
     deleteBtn.addEventListener('click', () => {
@@ -77,6 +81,7 @@ function addNewNote(text = '') {
     })
 
     document.body.appendChild(note);
+   
 
 }
 
@@ -95,7 +100,18 @@ function updateLS() {
 }
 
 
-function setBgColor( clickedDiv ) {
-    var currentColor = clickedDiv.style.backgroundColor;
-    body.style.backgroundColor = currentColor;
-}
+// function setRandomBgColor() {
+//     const note = document.querySelector('.note');
+//     var colors = ["#F28B82", "#FBBC04", "#CBF0F8","#FFF475","#CCFF90","#E6C9A8","#AECBFA"];
+
+//    const setColor = (colors[Math.floor(Math.random() * colors.length)]);
+
+//    note.style.backgroundColor = setColor;
+
+// }
+
+
+// function setBgColor( clickedDiv ) {
+//     var currentColor = clickedDiv.style.backgroundColor;
+//     body.style.backgroundColor = currentColor;
+// }
